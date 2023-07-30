@@ -1,0 +1,49 @@
+.btn {
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+.btn-major {
+  color: $white;
+  border: none;
+  font-size: 20px;
+  background: linear-gradient(150deg, $primary, $secondary);
+  transition: text-shadow 0.2s;
+  @include btn-shadow-release;
+  &:hover {
+    text-shadow: 0 0 5px;
+  }
+  &:active {
+    @include btn-shadow-press;
+  }
+}
+.btn-minor {
+  color: $white;
+  font-size: 20px;
+  border: 2px solid transparent;
+  -webkit-background-clip: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(to right, $purple-700, $purple-700),
+    linear-gradient(150deg, $primary, $secondary);
+  @include btn-shadow-release;
+  &:hover {
+    text-shadow: 1px 1px 1px $purple-700, 0 0 5px;
+  }
+  &:active {
+    @include btn-shadow-press;
+  }
+}
+.btn-lang-tc {
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 2px solid $primary;
+  color: $primary;
+  font-weight: bold;
+}
+.btn-lang-for {
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 2px solid $secondary;
+  color: $secondary;
+  font-weight: bold;
+}

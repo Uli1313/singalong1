@@ -1,0 +1,40 @@
+@mixin frosted-glass {
+  background: rgba($purple-700, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+@mixin btn-shadow-release {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+@mixin btn-shadow-press {
+  box-shadow: inset -2px -2px 2px 0px rgba(255, 255, 255, 0.25),
+    inset 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+@mixin center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// @mixin border-shadow($x, $y, $blur, $spread, $color) {
+//   box-shadow: $x $y $blur $spread $color,
+//     inset $x calc(0 - $y) $blur $spread $color;
+// }
+@mixin border-shadow($color) {
+  filter: drop-shadow(0 0 4px $color);
+}
+@mixin border-bottom-transparent($width, $color) {
+  border: $width solid $color;
+  border-bottom-color: transparent;
+}
+
+@mixin pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}

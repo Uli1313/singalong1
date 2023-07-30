@@ -1,4 +1,70 @@
-<h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<nav class="navbar navbar-expand-lg bg-glass navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#"
+      ><img src="../assets/images/logo.png" alt="SINGALONG"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link d-flex gap-2" aria-current="page" href="#">
+            <span class="material-icons"> pan_tool </span>
+            <p>我要揪團</p></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex gap-2" href="#">
+            <span class="material-icons"> view_list </span>
+            <p>揪團列表</p></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex gap-2" href="#">
+            <span class="material-icons"> menu_book </span>
+            <p>我的歌本</p></a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle d-flex gap-2 align-items-center"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="material-icons"> account_circle </span>
+            <p>我的帳戶</p>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#"
+                ><span class="material-icons me-2"> person </span>個人檔案</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><span class="material-icons me-2"> supervisor_account </span
+                >我的揪團</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><span class="material-icons me-2"> logout </span>登出</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

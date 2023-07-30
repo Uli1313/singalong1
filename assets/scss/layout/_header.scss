@@ -1,4 +1,13 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.dropdown-menu {
+  @include frosted-glass;
+  li {
+    background-color: none;
+  }
+}
+.dropdown-item {
+  background-color: none;
+  color: $gray-100;
+}
+.dropdown-menu[data-bs-popper] {
+  left: -10px;
 }

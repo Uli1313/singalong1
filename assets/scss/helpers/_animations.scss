@@ -1,0 +1,32 @@
+@keyframes move {
+  from {
+    background-position: 35% 30%;
+  }
+  to {
+    background-position: 65% 70%;
+  }
+}
+@keyframes sparkle {
+  from {
+    filter: drop-shadow(0 0 10px $secondary);
+  }
+  to {
+    filter: drop-shadow(0 0 30px $secondary);
+  }
+}
+@keyframes shake {
+  from {
+    top: -5px;
+  }
+  to {
+    top: 5px;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

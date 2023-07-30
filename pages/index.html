@@ -4,54 +4,470 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <title>index</title>
   </head>
   <body>
+    <!-- header -->
     <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
+    <!-- banner -->
+    <div class="banner bg-purple-700 position-relative overflow-hidden">
+      <div class="container">
+        <h2 class="h2 mb-4 pt-240">
+          在<span class="h1 ms-2 logo-gradient" style="line-height: 1"
+            >SINGALONG</span
+          ><br />尋找一起唱歌的夥伴吧！
+        </h2>
+        <a href="##" class="btn btn-major">看看目前的揪團</a>
+      </div>
+      <img
+        src="../assets/images/banner-img.png"
+        alt="singing girl"
+        class="banner-img position-absolute top-0 end-0"
+      />
+      <a
+        href="#situation"
+        class="banner-down d-none d-sm-block position-absolute border-3 bottom-0 start-50 translate-middle-x mb-6 border rounded-circle"
+        ><span class="material-icons p-8 position-relative">
+          keyboard_double_arrow_down
+        </span></a
+      >
+    </div>
+    <!-- situation -->
+    <div class="situation container py-80 mb-80" id="situation">
+      <h2 class="double-square mb-12 position-relative h2 ms-sm-10 text-shadow">
+        你是否有過這樣的想法或狀況？
+      </h2>
+      <ul
+        class="situation-list fs-5 text-center d-flex flex-wrap align-items-start justify-content-center gap-8"
+      >
+        <li class="rounded-5 d-none d-sm-block py-5 px-10 mt-10 mb-10">
+          想練歌但一個人去特別貴，<br />
+          唱整場也好累
+        </li>
+        <li class="rounded-5 py-5 px-10 fs-4">突然好想去KTV大唱特唱</li>
+        <li
+          class="rounded-5 py-5 px-10 mt-auto fs-4 me-auto me-sm-0 ms-sm-auto"
+        >
+          好想認識一樣喜歡唱〇〇歌的人
+        </li>
+        <li class="rounded-5 py-5 px-10">我選這首歌會不會冷場</li>
+        <li class="rounded-5 py-5 px-10 mt-sm-10 ms-6">
+          平常歌聽很多，<br />
+          <span class="d-none d-sm-inline-block">在ＫＴＶ</span
+          >卻會常常想不到有什麼歌可以唱
+        </li>
+        <li class="rounded-5 py-5 px-10 fs-3 align-self-start me-auto">
+          想點男女合唱的歌，但整場只有我會
+        </li>
+        <li class="rounded-5 d-none d-sm-block py-5 px-10 mt-8 me-6">
+          好想認識喜歡唱日Ｋ的朋友
+        </li>
+      </ul>
+    </div>
+    <!-- introduction -->
+    <div
+      class="bg-glass py-80 mb-80 border-top border-bottom border-purple-400"
+    >
+      <div class="container">
+        <h2 class="h2 text-center mb-12">
+          讓<span class="logo-gradient mx-2">SINGALONG</span>滿足你的需求吧！
+        </h2>
+        <ul class="row row-cols-md-3 fs-5">
+          <li class="d-flex flex-column">
+            <div
+              class="introduction-item-icon position-relative rounded-circle mb-4 mx-auto text-center"
+            >
+              <span class="material-icons"> emoji_people </span>
+              <h3 class="h3">我要揪團</h3>
+            </div>
+            <p class="py-4 px-6">
+              成為主揪，填寫開團資訊（名稱、時間、地點等）立刻成團，開始募集愛唱歌的小夥伴吧！
+            </p>
+          </li>
+          <li class="d-flex flex-column">
+            <div
+              class="introduction-item-icon position-relative rounded-circle mb-4 mx-auto text-center"
+            >
+              <span class="material-icons"> group_add </span>
+              <h3 class="h3">參加揪團</h3>
+            </div>
+            <p class="py-4 px-6">
+              至揪團列表頁面查看目前的揪團，找到喜歡的團時，點擊「我要參加」按鈕即可入團！現在就來尋找適合你的揪團吧！
+            </p>
+          </li>
+          <li class="d-flex flex-column">
+            <div
+              class="introduction-item-icon position-relative rounded-circle mb-4 mx-auto text-center"
+            >
+              <span class="material-icons"> menu_book </span>
+              <h3 class="h3">自訂歌本</h3>
+            </div>
+            <ul class="py-4 px-6 list-style-circle ms-8">
+              <li>製作屬於自己的歌本</li>
+              <li>點擊其他用戶的頭像查看公開歌本</li>
+              <li>一鍵查看你與其他用戶的歌本裡重複的歌曲，尋找你的歌友</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
+    <!-- index-swiper -->
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="text-center">
+      <h2 class="h2 text-gradient d-inline-block">無時無刻，歡唱無限</h2>
+    </div>
+    <div class="position-relative">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/img.png"
+              alt=""
+              class="rounded-5 position-relative"
+            />
+            <div class="bg-glass p-6 border border-purple-400 rounded-5">
+              <div class="d-flex justify-content-between mb-4">
+                <h4>台北唱歌++</h4>
+                <p class="btn-lang-tc">國語</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">地區</p>
+                  <p>台北市</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">目前人數</p>
+                  <p>( 6 / 8 )</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">日期</p>
+                  <p>2023 / 07 /14</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">時間</p>
+                  <p>13:00 - 16:00</p>
+                </div>
+              </div>
+              <p class="text-light fw-light fs-7">地點</p>
+              <p class="mb-4">錢櫃 - 台北林森店</p>
+              <a href="##" class="btn btn-minor d-block text-center"
+                >我要參加</a
+              >
+            </div>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/img.png"
+              alt=""
+              class="rounded-5 position-relative"
+            />
+            <div class="bg-glass p-6 border border-purple-400 rounded-5">
+              <div class="d-flex justify-content-between mb-4">
+                <h4>台北唱歌++</h4>
+                <p class="btn-lang-tc">國語</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">地區</p>
+                  <p>台北市</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">目前人數</p>
+                  <p>( 6 / 8 )</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">日期</p>
+                  <p>2023 / 07 /14</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">時間</p>
+                  <p>13:00 - 16:00</p>
+                </div>
+              </div>
+              <p class="text-light fw-light fs-7">地點</p>
+              <p class="mb-4">錢櫃 - 台北林森店</p>
+              <a href="##" class="btn btn-minor d-block text-center"
+                >我要參加</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/img.png"
+              alt=""
+              class="rounded-5 position-relative"
+            />
+            <div class="bg-glass p-6 border border-purple-400 rounded-5">
+              <div class="d-flex justify-content-between mb-4">
+                <h4>台北唱歌++</h4>
+                <p class="btn-lang-tc">國語</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">地區</p>
+                  <p>台北市</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">目前人數</p>
+                  <p>( 6 / 8 )</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">日期</p>
+                  <p>2023 / 07 /14</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">時間</p>
+                  <p>13:00 - 16:00</p>
+                </div>
+              </div>
+              <p class="text-light fw-light fs-7">地點</p>
+              <p class="mb-4">錢櫃 - 台北林森店</p>
+              <a href="##" class="btn btn-minor d-block text-center"
+                >我要參加</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/img.png"
+              alt=""
+              class="rounded-5 position-relative"
+            />
+            <div class="bg-glass p-6 border border-purple-400 rounded-5">
+              <div class="d-flex justify-content-between mb-4">
+                <h4>台北唱歌++</h4>
+                <p class="btn-lang-tc">國語</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">地區</p>
+                  <p>台北市</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">目前人數</p>
+                  <p>( 6 / 8 )</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">日期</p>
+                  <p>2023 / 07 /14</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">時間</p>
+                  <p>13:00 - 16:00</p>
+                </div>
+              </div>
+              <p class="text-light fw-light fs-7">地點</p>
+              <p class="mb-4">錢櫃 - 台北林森店</p>
+              <a href="##" class="btn btn-minor d-block text-center"
+                >我要參加</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/img.png"
+              alt=""
+              class="rounded-5 position-relative"
+            />
+            <div class="bg-glass p-6 border border-purple-400 rounded-5">
+              <div class="d-flex justify-content-between mb-4">
+                <h4>台北唱歌++</h4>
+                <p class="btn-lang-tc">國語</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">地區</p>
+                  <p>台北市</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">目前人數</p>
+                  <p>( 6 / 8 )</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">日期</p>
+                  <p>2023 / 07 /14</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">時間</p>
+                  <p>13:00 - 16:00</p>
+                </div>
+              </div>
+              <p class="text-light fw-light fs-7">地點</p>
+              <p class="mb-4">錢櫃 - 台北林森店</p>
+              <a href="##" class="btn btn-minor d-block text-center"
+                >我要參加</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/img.png"
+              alt=""
+              class="rounded-5 position-relative"
+            />
+            <div class="bg-glass p-6 border border-purple-400 rounded-5">
+              <div class="d-flex justify-content-between mb-4">
+                <h4>台北唱歌++</h4>
+                <p class="btn-lang-tc">國語</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">地區</p>
+                  <p>台北市</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">目前人數</p>
+                  <p>( 6 / 8 )</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">日期</p>
+                  <p>2023 / 07 /14</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">時間</p>
+                  <p>13:00 - 16:00</p>
+                </div>
+              </div>
+              <p class="text-light fw-light fs-7">地點</p>
+              <p class="mb-4">錢櫃 - 台北林森店</p>
+              <a href="##" class="btn btn-minor d-block text-center"
+                >我要參加</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/img.png"
+              alt=""
+              class="rounded-5 position-relative"
+            />
+            <div class="bg-glass p-6 border border-purple-400 rounded-5">
+              <div class="d-flex justify-content-between mb-4">
+                <h4>台北唱歌++</h4>
+                <p class="btn-lang-tc">國語</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">地區</p>
+                  <p>台北市</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">目前人數</p>
+                  <p>( 6 / 8 )</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">日期</p>
+                  <p>2023 / 07 /14</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">時間</p>
+                  <p>13:00 - 16:00</p>
+                </div>
+              </div>
+              <p class="text-light fw-light fs-7">地點</p>
+              <p class="mb-4">錢櫃 - 台北林森店</p>
+              <a href="##" class="btn btn-minor d-block text-center"
+                >我要參加</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../assets/images/img.png"
+              alt=""
+              class="rounded-5 position-relative"
+            />
+            <div class="bg-glass p-6 border border-purple-400 rounded-5">
+              <div class="d-flex justify-content-between mb-4">
+                <h4>台北唱歌++</h4>
+                <p class="btn-lang-tc">國語</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">地區</p>
+                  <p>台北市</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">目前人數</p>
+                  <p>( 6 / 8 )</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">日期</p>
+                  <p>2023 / 07 /14</p>
+                </div>
+                <div class="w-50 mb-1">
+                  <p class="text-light fw-light fs-7">時間</p>
+                  <p>13:00 - 16:00</p>
+                </div>
+              </div>
+              <p class="text-light fw-light fs-7">地點</p>
+              <p class="mb-4">錢櫃 - 台北林森店</p>
+              <a href="##" class="btn btn-minor d-block text-center"
+                >我要參加</a
+              >
+            </div>
           </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="unfold overflow-hidden position-absolute">
+        <div class="unfold-primary position-relative"></div>
+        <div class="unfold-secondary position-relative"></div>
       </div>
     </div>
 
+    <div class="text-center py-180">
+      <h2 class="h2 mb-6">
+        現在，就來加入<span class="logo-gradient mx-2">SINGALONG</span>吧！
+      </h2>
+      <a href="##" class="btn btn-major fs-5">立即註冊</a>
+    </div>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next", // 上一頁按鈕物件
+          prevEl: ".swiper-button-prev", // 下一頁按鈕物件
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+          1400: {
+            slidesPerView: 5,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

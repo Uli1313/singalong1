@@ -1,0 +1,116 @@
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: calc($grid-gutter-width / 2);
+  padding-right: calc($grid-gutter-width / 2);
+}
+.bg-glass {
+  @include frosted-glass;
+}
+.bg-purple-700 {
+  background: $purple-700;
+  // background: linear-gradient(to bottom, $purple-700, $purple-900 80%);
+}
+.h1 {
+  font-size: 80px;
+}
+.h2 {
+  font-size: 40px;
+  @include mobile {
+    font-size: 24px;
+  }
+}
+.h3 {
+  font-size: 32px;
+}
+.h4 {
+  font-size: 20px;
+}
+.fs-4 {
+  font-size: 24px !important;
+}
+.fs-5 {
+  font-size: 20px !important;
+}
+.fs-7 {
+  font-size: 14px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+.mb-180 {
+  margin-bottom: 180px;
+}
+.p-64 {
+  padding: 64px;
+}
+.pt-240 {
+  padding-top: 240px;
+}
+.py-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.py-180 {
+  padding-top: 180px;
+  padding-bottom: 180px;
+  @include mobile {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.logo-gradient {
+  color: transparent;
+  background: linear-gradient(to right, $primary 40%, white, $secondary 60%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: move 1.5s ease-in-out infinite alternate-reverse;
+}
+.text-gradient {
+  color: transparent;
+  background: linear-gradient(150deg, $primary, $secondary);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.double-square {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 3px solid;
+    z-index: -1;
+  }
+  &::before {
+    top: -30px;
+    left: -40px;
+    border-color: $primary;
+    @include border-shadow($primary);
+  }
+  &::after {
+    top: -10px;
+    left: -20px;
+    border-color: $secondary;
+    @include border-shadow($secondary);
+  }
+}
+.text-shadow {
+  text-shadow: 1px 1px 1px $black;
+}
+
+.list-style-circle {
+  list-style-type: circle;
+}
+.border-purple-400 {
+  border-color: $purple-400;
+}

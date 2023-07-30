@@ -1,0 +1,27 @@
+body {
+  background: $purple-900;
+  color: $white;
+  font-family: "Tektur", "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+ul {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+h1 {
+  font-size: 0;
+}
+.material-icons {
+  vertical-align: middle;
+}

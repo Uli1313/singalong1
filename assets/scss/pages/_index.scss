@@ -1,3 +1,188 @@
-.index-title {
-  font-size: 100px;
+.banner {
+  height: calc(100vh - 64px);
+  z-index: 0;
+  &-img {
+    height: calc(100vh - 64px);
+    object-fit: cover;
+    filter: drop-shadow(0 0 10px $secondary);
+    animation: sparkle 1.5s ease-in-out infinite alternate;
+    z-index: -1;
+  }
+  &-down {
+    box-shadow: 0 0 10px, inset 0 0 5px;
+    background: rgba($white, 0.1);
+    span {
+      font-size: 40px;
+      filter: drop-shadow(0 0 10px);
+      animation: shake 0.5s ease-in-out infinite alternate;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      border: 2px solid;
+      border-radius: 50%;
+      top: 10%;
+      left: 10%;
+      box-shadow: 0 0 10px, inset 0 0 5px;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(to bottom, rgba($purple-700, 0%), $purple-900);
+  }
+  @include mobile {
+    height: 65vh;
+    &-img {
+      height: 65vh;
+    }
+    span {
+      font-size: 40px;
+    }
+    &::before {
+      height: 60px;
+    }
+  }
+}
+.situation {
+  &-list {
+    li {
+      @include frosted-glass;
+      transition: all 0.2s;
+      box-shadow: -1px -1px 5px 0 $primary, 1px 1px 5px 0 $secondary;
+      &:hover {
+        box-shadow: -1px -1px 10px 0 $primary, 1px 1px 10px 0 $secondary;
+      }
+    }
+  }
+  @include mobile {
+    .double-square {
+      &::before,
+      &::after {
+        width: 50px;
+        height: 50px;
+      }
+      &::before {
+        top: -20px;
+        left: -10px;
+      }
+      &::after {
+        top: -10px;
+        left: 5px;
+      }
+    }
+    &-list {
+      li {
+        font-size: 16px !important;
+      }
+    }
+  }
+}
+.introduction {
+  &-item {
+    &-icon {
+      width: 260px;
+      height: 260px;
+      flex-direction: column;
+      @include center-center;
+      span {
+        font-size: 84px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+      }
+      &::before {
+        width: 100%;
+        height: 100%;
+        @include border-bottom-transparent(3px, $primary);
+        @include border-shadow($primary);
+        animation: rotate 3s infinite linear;
+      }
+      &::after {
+        width: 80%;
+        height: 80%;
+        @include border-bottom-transparent(3px, $secondary);
+        @include border-shadow($secondary);
+        animation: rotate 6s infinite linear reverse;
+      }
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+}
+.swiper-slide img {
+  display: block;
+  width: 90%;
+  width: 90%;
+  top: 60px;
+  left: 16px;
+}
+.slide-card {
+  position: relative;
+}
+
+.unfold {
+  pointer-events: none;
+  height: 640px;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  &-primary,
+  &-secondary {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1000px;
+      height: 1000px;
+      background: $purple-700;
+      border: 3px solid;
+      transform: rotate(-15deg);
+    }
+  }
+  &-primary::before {
+    border-color: $primary;
+    top: -200px;
+    left: -800px;
+    box-shadow: 0 0 30px 10px $black, inset 0 0 10px 0 $primary;
+  }
+  &-secondary::before {
+    border-color: $secondary;
+    top: -200px;
+    right: -800px;
+    box-shadow: 0 0 30px 10px $black, inset 0 0 10px 0 $secondary;
+  }
+  &-primary::after,
+  &-secondary::after {
+    font-size: 180px;
+    line-height: 1.2;
+    white-space: pre-line;
+    position: absolute;
+    color: $purple-700;
+  }
+  &-primary::after {
+    content: "SINGING\AWITH";
+    text-align: end;
+    top: 200px;
+    left: -580px;
+    text-shadow: 2px 2px 2px $black, 0 0 6px $primary;
+  }
+  &-secondary::after {
+    content: "BOUNDLESS\AJOY";
+    right: -870px;
+    text-shadow: 2px 2px 2px $black, 0 0 6px $secondary;
+  }
 }
