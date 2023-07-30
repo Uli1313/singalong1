@@ -114,3 +114,22 @@
 .border-purple-400 {
   border-color: $purple-400;
 }
+
+.circle {
+  position: absolute;
+  width: 20%;
+  padding-top: 20%;
+  z-index: -1;
+  background: rgba($primary, 0.4);
+  border-radius: 50%;
+  filter: blur(100px);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    width: 75%;
+    padding-top: 75%;
+    background: rgba($secondary, 0.4);
+    border-radius: 50%;
+  }
+}

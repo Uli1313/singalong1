@@ -35,6 +35,7 @@
     width: 100%;
     height: 160px;
     background: linear-gradient(to bottom, rgba($purple-700, 0%), $purple-900);
+    pointer-events: none;
   }
   @include mobile {
     height: 65vh;
@@ -68,12 +69,12 @@
         height: 50px;
       }
       &::before {
-        top: -20px;
-        left: -10px;
+        top: -16px;
+        left: 290px;
       }
       &::after {
-        top: -10px;
-        left: 5px;
+        top: -4px;
+        left: 280px;
       }
     }
     &-list {
@@ -115,6 +116,11 @@
       }
     }
   }
+  @include mobile {
+    &-list {
+      font-size: 16px !important;
+    }
+  }
 }
 
 .swiper {
@@ -122,14 +128,15 @@
 }
 
 .swiper-slide {
-  width: 100%;
+  width: 306px;
 }
 .swiper-slide img {
   display: block;
   width: 90%;
-  width: 90%;
+  height: 250px;
   top: 60px;
   left: 16px;
+  object-fit: cover;
 }
 .slide-card {
   position: relative;
